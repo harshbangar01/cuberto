@@ -17,20 +17,30 @@ gsap.to(".fleftelm", {
   ease: Power1,
 });
 
-let sections = document.querySelectorAll(".fleftelm");
-Shery.imageEffect(".images", {
-  style: 4,
-  config: { onMouse: { value: 1 } },
-  slideStyle: (setScroll) => {
-    sections.forEach(function (section, index) {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        scrub: 1,
-        onUpdate: function (prog) {
-          setScroll(prog.progress + index);
-        },
-      });
-    });
-  },
-});
+// Shery.imageEffect(".images", {
+//   style: 3,
+//   /*optional parameters
+//   these parameter dose not applies to custom scroll trigger callback */
+//   scrollSnapping: true,
+//   scrollSpeed: 6,
+//   touchSpeed: 6,
+//   damping: 7,
+// });
+
+// let sections = document.querySelectorAll(".fleftelm");
+// Shery.imageEffect(".images", {
+//   style: 4,
+//   config: { onMouse: { value: 1 } },
+//   slideStyle: (setScroll) => {
+//     sections.forEach(function (section, index) {
+//       ScrollTrigger.create({
+//         trigger: section,
+//         start: "top top",
+//         scrub: 1,
+//         onUpdate: function (prog) {
+//           setScroll(prog.progress + index);
+//         },
+//       });
+//     });
+//   },
+// });
